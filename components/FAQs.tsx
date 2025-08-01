@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Mail } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface FAQItemProps {
   question: string;
@@ -22,12 +21,12 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
       transition={{
         duration: 0.3,
         delay: index * 0.15,
-        ease: 'easeOut',
+        ease: "easeOut",
       }}
       className={cn(
-        'group border-border/60 rounded-lg border',
-        'transition-all duration-200 ease-in-out',
-        isOpen ? 'bg-card/30 shadow-sm' : 'hover:bg-card/50',
+        "group border-border/60 rounded-lg border",
+        "transition-all duration-200 ease-in-out",
+        isOpen ? "bg-card/30 shadow-sm" : "hover:bg-card/50"
       )}
     >
       <button
@@ -37,9 +36,9 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
       >
         <h3
           className={cn(
-            'text-left text-base font-medium transition-colors duration-200',
-            'text-foreground/80',
-            isOpen && 'text-foreground',
+            "text-left text-base font-medium transition-colors duration-200",
+            "text-foreground/80",
+            isOpen && "text-foreground"
           )}
         >
           {question}
@@ -51,12 +50,12 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           }}
           transition={{
             duration: 0.3,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           className={cn(
-            'shrink-0 rounded-full p-0.5',
-            'transition-colors duration-200',
-            isOpen ? 'text-primary' : 'text-muted-foreground',
+            "shrink-0 rounded-full p-0.5",
+            "transition-colors duration-200",
+            isOpen ? "text-primary" : "text-muted-foreground"
           )}
         >
           <ChevronDown className="h-4 w-4" />
@@ -67,7 +66,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{
-              height: 'auto',
+              height: "auto",
               opacity: 1,
               transition: {
                 height: {
@@ -86,7 +85,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
               transition: {
                 height: {
                   duration: 0.3,
-                  ease: 'easeInOut',
+                  ease: "easeInOut",
                 },
                 opacity: {
                   duration: 0.25,
@@ -101,7 +100,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
                 exit={{ y: -8, opacity: 0 }}
                 transition={{
                   duration: 0.3,
-                  ease: 'easeOut',
+                  ease: "easeOut",
                 }}
                 className="text-muted-foreground text-sm leading-relaxed"
               >
@@ -116,26 +115,26 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 }
 
 export default function Faq3() {
-  const faqs: Omit<FAQItemProps, 'index'>[] = [
+  const faqs: Omit<FAQItemProps, "index">[] = [
     {
-      question: 'What makes Cloudmesh unique?',
+      question: "What makes Cloudmesh unique?",
       answer:
         "Cloudmesh is opensource and transparent unlike other cloud sync tools.",
     },
     {
-      question: 'Does Cloudmesh store my files?',
+      question: "Does Cloudmesh store my files?",
       answer:
-        'No, Cloudmesh does not store any of your files. We only sync your files from your cloud storage providers.',
+        "No, Cloudmesh does not store any of your files. We only sync your files from your cloud storage providers.",
     },
     {
-      question: 'How does Cloudmesh work?',
+      question: "How does Cloudmesh work?",
       answer:
         "Cloudmesh works by syncing your files from your cloud storage providers to your local machine. You can then access your files from your local machine or from the cloud.",
     },
     {
-      question: 'Why is there a paid plan?',
+      question: "Why is there a paid plan?",
       answer:
-        'We need to pay for the infrastructure to sync your files. We are a small team and we need to make money to keep the project alive.',
+        "We need to pay for the infrastructure to sync your files. We are a small team and we need to make money to keep the project alive.",
     },
   ];
 
@@ -152,12 +151,11 @@ export default function Faq3() {
           transition={{ duration: 0.5 }}
           className="mx-auto mb-12 max-w-2xl text-center"
         >
-
-<h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
-          Frequently Asked Questions
-              </h3>
+          <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
+            Frequently Asked Questions
+          </h3>
           <p className="text-muted-foreground text-sm">
-          Everything you need to know about CloudMesh
+            Everything you need to know about CloudMesh
           </p>
         </motion.div>
 
@@ -166,8 +164,6 @@ export default function Faq3() {
             <FAQItem key={index} {...faq} index={index} />
           ))}
         </div>
-
-      
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import createGlobe from 'cobe';
-import { cn } from '@/lib/utils';
+import React, { useEffect, useRef } from "react";
+import createGlobe from "cobe";
+import { cn } from "@/lib/utils";
 
 interface EarthProps {
   className?: string;
@@ -34,7 +34,7 @@ const Earth: React.FC<EarthProps> = ({
     let width = 0;
     const onResize = () =>
       canvasRef.current && (width = canvasRef.current.offsetWidth);
-    window.addEventListener('resize', onResize);
+    window.addEventListener("resize", onResize);
     onResize();
     let phi = 0;
 
@@ -58,6 +58,7 @@ const Earth: React.FC<EarthProps> = ({
       markers: [
         // longitude latitude
       ],
+      // eslint-disable-next-line
       onRender: (state: Record<string, any>) => {
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.\
@@ -69,22 +70,23 @@ const Earth: React.FC<EarthProps> = ({
     return () => {
       globe.destroy();
     };
+    // eslint-disable-next-line
   }, []);
 
   return (
     <div
       className={cn(
-        'flex items-center justify-center z-[10] w-full max-w-[350px] mx-auto',
+        "flex items-center justify-center z-[10] w-full max-w-[350px] mx-auto",
         className
       )}
     >
       <canvas
         ref={canvasRef}
         style={{
-          width: '100%',
-          height: '100%',
-          maxWidth: '100%',
-          aspectRatio: '1',
+          width: "100%",
+          height: "100%",
+          maxWidth: "100%",
+          aspectRatio: "1",
         }}
       />
     </div>

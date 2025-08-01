@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { useTheme } from 'next-themes'; 
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, ChevronRight, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 export default function GradientHero() {
-  const { theme } = useTheme();
   return (
     <div className="bg-background relative w-full overflow-hidden">
       {/* Background gradient */}
@@ -27,7 +25,6 @@ export default function GradientHero() {
             className="mx-auto mb-6 flex justify-center"
           >
             <div className="border-border bg-background/80 inline-flex items-center rounded-full border px-3 py-1 text-sm backdrop-blur-sm">
-              
               <span className="text-muted-foreground">
                 Sync your cloud files with ease
               </span>
@@ -42,8 +39,7 @@ export default function GradientHero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            All your cloud files
-            One clean dashboard.
+            All your cloud files One clean dashboard.
           </motion.h1>
 
           {/* Description */}
@@ -53,7 +49,8 @@ export default function GradientHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground mx-auto mt-6 max-w-2xl text-center text-lg"
           >
-            Search, browse, and manage files across Google Drive, OneDrive and Dropbox.
+            Search, browse, and manage files across Google Drive, OneDrive and
+            Dropbox.
             <br />
             No switching tabs. No mess.
           </motion.p>
@@ -94,7 +91,7 @@ export default function GradientHero() {
             transition={{
               duration: 0.8,
               delay: 0.5,
-              type: 'spring',
+              type: "spring",
               stiffness: 50,
             }}
             className="relative mx-auto mt-16 max-w-4xl"
@@ -111,7 +108,7 @@ export default function GradientHero() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <Image
                   src="/cloudmesh_hero.png"
                   alt="Dashboard Preview"
                   className="w-full"
