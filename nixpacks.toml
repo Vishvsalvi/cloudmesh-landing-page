@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["nodejs"]
+# Corepack allows better control of yarn/pnpm if used
+
+[phases.install]
+cmds = ["npm ci --omit=dev"]
+# Use `ci` for deterministic installs
+# Use `--omit=dev` to skip devDependencies
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"
