@@ -26,7 +26,7 @@ const Privacy = () => {
           <p className="text-md text-foreground mt-4">
             This policy applies to all users of Cloudmesh, including those
             accessing our services from Mumbai, Maharashtra, India, or any other
-            location. We comply with applicable laws, including India's Digital
+            location. We comply with applicable laws, including India&apos;s Digital
             Personal Data Protection Act, 2023 (DPDP Act), and strive to align
             with international standards like the General Data Protection
             Regulation (GDPR) for global users.
@@ -185,7 +185,7 @@ const Privacy = () => {
         </div>
         <div className="mt-12">
           <h2 className="text-2xl font-geist font-semibold tracking-tight">
-            8. Children's Privacy
+            8. Children&apos;s Privacy
           </h2>
           <p className="text-md text-foreground mt-4">
             Cloudmesh is not intended for users under 13 years old (or 18 in some jurisdictions). We do not knowingly collect data from children, and parents should contact us if they believe we have such information.
