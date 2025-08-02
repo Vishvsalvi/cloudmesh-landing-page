@@ -11,6 +11,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export function NavbarComponent() {
   const navItems = [
@@ -25,6 +26,12 @@ export function NavbarComponent() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isPrivacyPage = pathname === "/privacy";
+
+  if (isPrivacyPage) {
+    return null;
+  }
 
   return (
     <div className="w-full">

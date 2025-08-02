@@ -28,7 +28,7 @@ const featuredCard = [
       "Sync your files with the click of a button. No more switching between tabs.",
     type: "featured",
     color: "bg-blue-500/20 text-blue-500",
-    image: "./account_dark.png",
+    image: "/account_dark.png",
   },
   {
     icon: <Zap className="h-4 w-4" />,
@@ -37,7 +37,7 @@ const featuredCard = [
       "CloudMesh is designed to be fast and minimal, so you can focus on your work.",
     type: "featured",
     color: "bg-yellow-500/20 text-yellow-500",
-    image: "fast.png",
+    image: "/fast.png",
   },
   {
     icon: <SquareX className="h-4 w-4" />,
@@ -45,7 +45,7 @@ const featuredCard = [
     subtitle: "CloudMesh does not store any of your files.",
     type: "featured",
     color: "bg-green-500/20 text-green-500",
-    image: "./storage.avif",
+    image: "/storage.avif",
   },
   {
     icon: <Github className="h-4 w-4" />,
@@ -53,7 +53,7 @@ const featuredCard = [
     subtitle: "CloudMesh is open source to ensure transparency.",
     type: "featured",
     color: "bg-gray-500/20 text-gray-500",
-    image: "./github_logo.png",
+    image: "/github_logo.png",
   },
 ];
 export default function Feature() {
@@ -75,10 +75,10 @@ export default function Feature() {
           className="relative mx-auto max-w-2xl sm:text-center"
         >
           <div className="relative z-10">
-            <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl">
+            <h3 className="font-geist mt-4 text-3xl font-normal tracking-tighter sm:text-4xl md:text-5xl text-center">
               From frustration to solution
             </h3>
-            <p className="font-geist text-foreground/60 mt-3">
+            <p className="font-geist text-foreground/60 mt-3 text-center">
               CloudMesh solves the everyday challenges of working with multiple
               cloud storage providers.
             </p>
@@ -98,7 +98,7 @@ export default function Feature() {
           initial={{ opacity: 0 }}
           animate={areCardsInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="relative mt-12 grid grid-cols-2 gap-4"
+          className="relative mt-12 grid grid-cols-1 md:grid-cols-2 gap-4"
         >
           {/* Featured Card */}
           {featuredCard.map((item, idx) => (
@@ -161,6 +161,8 @@ export default function Feature() {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    width={1000}
+                    height={1000}
                     className="w-full h-full object-cover scale-110 rounded-xl"
                   />
                 </div>
