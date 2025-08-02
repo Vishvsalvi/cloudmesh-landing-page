@@ -111,6 +111,8 @@ export default function GradientHero() {
                 <Image
                   src="/cloudmesh_hero.png"
                   alt="Dashboard Preview"
+                  width={1000}
+                  height={1000}
                   className="w-full"
                 />
                 <div className="from-background absolute inset-0 bg-gradient-to-t to-transparent opacity-0"></div>

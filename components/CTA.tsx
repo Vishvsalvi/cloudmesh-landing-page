@@ -10,7 +10,7 @@ const CTA = () => {
   const isSectionInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   return (
-    <section ref={sectionRef} className="relative py-14">
+    <section ref={sectionRef} className="relative py-14 mx-5 md:mx-0">
         <motion.div 
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={isSectionInView ? { 
@@ -44,10 +44,17 @@ const CTA = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button >
-                    Get Started 
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
+            <Button
+              size="lg"
+              variant="default"
+              className="group bg-primary text-primary-foreground hover:shadow-primary/30 relative overflow-hidden px-6 shadow-lg transition-all duration-300"
+            >
+              <span className="relative z-10 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+              <span className=" absolute inset-0 z-0 bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+            </Button>
                 </motion.div>
             </div>
         </motion.div>

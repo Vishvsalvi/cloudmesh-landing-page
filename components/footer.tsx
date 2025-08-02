@@ -68,23 +68,23 @@ export default function Footer() {
             </p>
             <div className="flex space-x-6 text-sm text-foreground/60">
               <a
-                href="#"
+                href="/privacy"
                 className="hover:text-foreground transition-colors duration-200"
               >
                 Privacy Policy
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="hover:text-foreground transition-colors duration-200"
               >
                 Terms of Service
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="hover:text-foreground transition-colors duration-200"
               >
                 Cookie Policy
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
